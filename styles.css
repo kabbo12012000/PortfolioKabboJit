@@ -236,7 +236,7 @@ nav {
 }
 
 .cube-ai-ml {
-  background-image: linear-gradient(rgba(5, 5, 5, 0.35), rgba(5, 5, 5, 0.55)), url("images/ai-ml.jpg");
+  background-image: linear-gradient(rgba(5, 5, 5, 0.35), rgba(5, 5, 5, 0.55)), url("images/aiml.jpeg");
   background-size: cover;
   background-position: center;
 }
@@ -248,7 +248,7 @@ nav {
 }
 
 .cube-deep-learning {
-  background-image: linear-gradient(rgba(5, 5, 5, 0.35), rgba(5, 5, 5, 0.55)), url("images/deep-learning.png");
+  background-image: linear-gradient(rgba(5, 5, 5, 0.35), rgba(5, 5, 5, 0.55)), url("images/dl.png");
   background-size: cover;
   background-position: center;
 }
