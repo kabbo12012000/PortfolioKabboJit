@@ -4,6 +4,8 @@
   const cursorDot = document.querySelector(".cursor-dot");
   const cursorRing = document.querySelector(".cursor-ring");
   const heroText = document.getElementById("heroText");
+  const resumeIframe = document.getElementById("resume-iframe");
+  const resumeFallback = document.getElementById("resume-fallback");
   const hoverTargets = document.querySelectorAll("a, button, .project-card, .pill");
 
   if (isDesktop) {
@@ -44,6 +46,13 @@
   );
 
   revealItems.forEach((item) => observer.observe(item));
+
+  if (resumeIframe && resumeFallback) {
+    resumeIframe.addEventListener("error", () => {
+      resumeIframe.style.display = "none";
+      resumeFallback.style.display = "flex";
+    });
+  }
 
   if (!reduceMotion) {
     let ticking = false;
