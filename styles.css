@@ -211,8 +211,10 @@ nav {
 }
 
 .cube-wrap {
-  width: 50vh;
-  height: 50vh;
+  --cube-size: min(50vh, 480px);
+  --cube-depth: calc(var(--cube-size) / 2);
+  width: var(--cube-size);
+  height: var(--cube-size);
   position: relative;
   transform-style: preserve-3d;
   animation: rotateCube 20s linear infinite;
@@ -265,10 +267,10 @@ nav {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-.cube-front { transform: translateZ(25vh); }
-.cube-back { transform: rotateX(180deg) translateZ(25vh); }
-.cube-top { transform: rotateX(90deg) translateZ(25vh); }
-.cube-bottom { transform: rotateX(-90deg) translateZ(25vh); }
+.cube-front { transform: translateZ(var(--cube-depth)); }
+.cube-back { transform: rotateX(180deg) translateZ(var(--cube-depth)); }
+.cube-top { transform: rotateX(90deg) translateZ(var(--cube-depth)); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(var(--cube-depth)); }
 
 .hero-copy {
   position: absolute;
@@ -1055,7 +1057,10 @@ footer {
   }
 
   .cube-wrap {
-    display: none;
+    --cube-size: min(36vh, 260px);
+    --cube-depth: calc(var(--cube-size) / 2);
+    display: block;
+    margin: 0 auto 32px;
   }
 
   .hero-copy {
